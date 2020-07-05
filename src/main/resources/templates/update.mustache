@@ -1,0 +1,23 @@
+{{>layout/header}}
+
+<h1>글 수정</h1>
+<hr>
+<div class="col-md-12">
+    <input type="hidden" id="updateBno" value="{{update.bno}}">
+    <div class="form-group">
+        제목<br><input type="text" id="title" placeholder="제목" value="{{update.title}}" readonly><br>
+    </div>
+    <div class="form-group">
+        작성자<br><input type="text" id="writer" placeholder="작성자" value="{{update.writer}}" readonly><br>
+    </div>
+    <div class="form-group">
+        내용<br><textarea id="content" placeholder="내용">{{update.content}}</textarea><br><br>
+    </div>
+    <div class="form-group">
+        <button id="update" class="btn btn-primary">수정</button>
+        <button id="delete" class="btn btn-secondary">삭제</button>
+        <button id="updateCancel" class="btn btn-warning">취소</button>
+    </div>
+</div>
+
+{{>layout/footer}}

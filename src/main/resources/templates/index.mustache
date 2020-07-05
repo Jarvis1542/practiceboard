@@ -1,0 +1,29 @@
+{{>layout/header}}
+
+<h1>게시판</h1>
+<hr>
+    <button id="regBtn" class="btn btn-primary">등록</button><br>
+<div class="col-md-12">
+    <table class="table table-horizontal table-bordered" style="text-align: center;">
+        <thead class="thead-strong">
+        <tr>
+            <th>게시글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+        </tr>
+        </thead>
+        {{#list}}
+        <tbody id="tbody">
+            <th>{{bno}}</th>
+            <th><a href="/select/{{bno}}">{{title}}</a></th>
+            <th>{{writer}}</th>
+            <th>{{regDate}}</th>
+            <th>{{count}}</th>
+        </tbody>
+        {{/list}}
+    </table>
+</div>
+
+{{>layout/footer}}

@@ -1,0 +1,39 @@
+{{>layout/header}}
+
+<h1>글 관람</h1>
+<hr>
+<div class="col-md-12">
+    <input type="hidden" id="bno" value="{{select.bno}}">
+    <div class="form-group">
+        <p>제목 : {{select.title}}</p>
+    </div>
+    <div class="form-group">
+        작성자 : <span>{{select.writer}}</span>&emsp13;&emsp13;&emsp13;
+            {{select.regDate}}
+        &emsp13;&emsp13;&emsp13;{{select.count}}<br><br>
+    </div>
+    <div class="form-group">
+        내용<P>{{select.content}}</P><br><br>
+    </div>
+    <div class="form-group">
+        <button id="updateBtn" class="btn btn-primary">수정</button>
+        <button id="cancel" class="btn btn-primary">뒤로가기</button>
+    </div>
+    <br><br><Br><br>
+
+
+        <ul>
+    {{#reply}}
+            <li><p>작성자 : {{rwriter}}&emsp13;&emsp13;&emsp13;{{rregDate}}</p>{{rcontent}}</li>
+    {{/reply}}
+        </ul>
+
+
+    <br><br><Br><br>
+    작성자 : <input type="text" id="rwriter"><br>
+    댓글 : <textarea id="rcontent"></textarea><br>
+    <button id="insertReply" lass="btn btn-primary">댓글달기</button>
+    <button id="cancel" class="btn btn-primary">뒤로가기</button>
+</div>
+
+{{>layout/footer}}

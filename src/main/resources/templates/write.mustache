@@ -1,0 +1,20 @@
+{{>layout/header}}
+
+<h1>글 작성</h1>
+<hr>
+<div class="col-md-12">
+    <div class="form-group">
+        제목<br><input type="text" id="title" placeholder="제목"><br>
+    </div>
+    <div class="form-group">
+        내용<br><textarea id="content" placeholder="내용"></textarea><br>
+    </div>
+    <div class="form-group">
+        작성자<br><input type="text" id="writer" placeholder="작성자"><br>
+    </div>
+    <div class="form-group">
+        <button id="insert" class="btn btn-primary">등록</button><button id="cancel" class="btn btn-warning">취소</button>
+    </div>
+</div>
+
+{{>layout/footer}}
